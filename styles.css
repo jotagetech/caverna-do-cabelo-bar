@@ -28,6 +28,15 @@
   box-sizing: border-box;
 }
 
+/* O atributo "hidden" nao aplica display:none de forma confiavel em
+   elemento svg (funciona em elemento HTML comum, nao em SVG), entao o
+   sprite de icones reaproveitados no topo do body ficava ocupando o
+   tamanho padrao de um svg sem estilo (300x150), mesmo sem desenhar nada
+   visivel. */
+svg[hidden] {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
